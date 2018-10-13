@@ -1,5 +1,5 @@
 
-class Profile{
+export class Profile{
 
     key: number;
     username: String;
@@ -7,25 +7,28 @@ class Profile{
     lName: String;
     email: String;
     bio: String;
-    dob: String;
+    dob: Date;
     gender: String;
     lang: String;
     city: String;
     state: String;
 
-    constructor (key: number,username: String, fName: String, lName: String, email: String, bio: String, dob: String, gender: String, lang: String, city: String, state: String){
-        this.key = key;
-        this.username = username;
-        this.fName = fName;
-        this.lName = lName;
-        this.email = email;
-        this.bio = bio;
-        this.dob = dob;
-        this.gender = gender;
-        this.lang = lang;
-        this.city = city;
-        this.state = state;
+
+    //original const  key: number,username: String, fName: String, lName: String, email: String, bio: String, dob: String, gender: String, lang: String, city: String, state: String
+    constructor (data: any){
+        this.key = data.profileID;
+        this.username = data.userName;
+        this.fName = data.firstName;
+        this.lName = data.lastName;
+        this.email = data.email;
+        this.bio = data.bio;
+        this.dob = data.dateOfBirth;
+        this.gender = data.gender;
+        this.lang = data.language;
+        this.city = data.city;
+        this.state = data.state;
 
     }
+
 
 }

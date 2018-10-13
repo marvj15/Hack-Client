@@ -2,12 +2,73 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>FirstName LastName</ion-title>
+    <ion-title>{{profileInfo.username}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-label fill>{{profileInfo.fName}}</ion-label>
+  <ion-label fill>{{profileInfo.lName}}</ion-label>
+  <ion-label fill>{{profileInfo.email}}</ion-label>
+  <ion-label fill>{{profileInfo.bio}}</ion-label>
+  <ion-label fill>{{profileInfo.dob}}</ion-label>
+  <ion-label fill>{{profileInfo.gender}}</ion-label>
+  <ion-label fill>{{profileInfo.lang}}</ion-label>
+  <ion-label fill>{{profileInfo.city}}</ion-label>
+  <ion-label fill>{{profileInfo.state}}</ion-label>
+
+  <ion-list>
+
+      <ion-item>
+        <ion-label stacked>First Name</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label stacked>Last Name</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked>Bio</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked>Date Of Birth</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked>Gender</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked>Language</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked>City</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked>State</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+
+  <div class="myforums">MyForums</div>
+  <div class="myevents">MyEvents</div>
+
 
 </ion-content>

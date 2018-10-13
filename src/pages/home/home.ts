@@ -21,7 +21,7 @@ export class HomePage {
 
     this.lol = "dsgsg";
 
-    let url = "https://thawing-hamlet-66544.herokuapp.com/api/hello";
+    let url = "https://hack-back.herokuapp.com/api/hello";
 
     this.http.get(url).map(res => res.json()).subscribe(data => {
 
