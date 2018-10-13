@@ -8,8 +8,14 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { EventPage } from '../pages/event/event';
+import { EventsFeedPage } from '../pages/events-feed/events-feed';
+import { ForumPage } from '../pages/forum/forum';
+import { ForumsFeedPage } from '../pages/forums-feed/forums-feed';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
@@ -17,7 +23,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    EventPage,
+    EventsFeedPage,
+    ForumPage,
+    ForumsFeedPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +40,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    EventPage,
+    EventsFeedPage,
+    ForumPage,
+    ForumsFeedPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,
