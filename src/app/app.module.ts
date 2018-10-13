@@ -17,6 +17,8 @@ import { ForumPage } from '../pages/forum/forum';
 import { ForumsFeedPage } from '../pages/forums-feed/forums-feed';
 import { ProfilePage } from '../pages/profile/profile';
 
+import { HttpModule } from '@angular/http';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -32,6 +34,7 @@ import { ProfilePage } from '../pages/profile/profile';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -50,7 +53,7 @@ import { ProfilePage } from '../pages/profile/profile';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
