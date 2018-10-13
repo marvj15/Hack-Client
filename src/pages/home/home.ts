@@ -9,6 +9,7 @@ import 'rxjs/add/operator/map';
 })
 export class HomePage {
 
+
   lol: string;
 
   constructor(public navCtrl: NavController, public http: Http) {
