@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController, Platform } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -12,7 +12,12 @@ export class HomePage {
 
   lol: string;
 
-  constructor(public navCtrl: NavController, public http: Http) {
+  constructor(
+    public navCtrl: NavController,
+    public http: Http,
+    private alertCtrl: AlertController,
+    private platform: Platform
+  ) {
 
     this.lol = "dsgsg";
 
@@ -24,6 +29,16 @@ export class HomePage {
 
     });
 
+  }
+
+  showPlatform() {
+    let text = 'I run on: ' + this.platform.platforms();
+    let alert = this.alertCtrl.create({
+      title: 'My Home',
+      subTitle: text,
+      buttons: ['Ok']
+    });
+    alert.present();
   }
 
 }
