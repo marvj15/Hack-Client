@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>ForumsFeed</ion-title>
+    <ion-title>Forums</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,4 +15,21 @@
 
 <ion-content padding>
 
+
+  <ion-list>
+    <ion-item *ngFor="let i of items">{{i}}
+        <ion-card>
+            <ion-card-header>
+              Header
+            </ion-card-header>
+            <ion-card-content>
+              The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+            </ion-card-content>
+          </ion-card>
+    </ion-item>
+  </ion-list>
+       
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

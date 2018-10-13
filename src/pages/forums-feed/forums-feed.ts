@@ -14,8 +14,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'forums-feed.html',
 })
 export class ForumsFeedPage {
+  items = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    for (let i = 0; i < 30; i++) {
+      this.items.push( this.items.length );
+    }
+  }
+
+  doInfinite(infiniteScroll) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+      for (let i = 0; i < 30; i++) {
+        this.items.push( this.items.length );
+      }
+
+      console.log('Async operation has ended');
+      infiniteScroll.complete();
+    }, 500);
   }
 
   ionViewDidLoad() {
